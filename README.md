@@ -4,6 +4,8 @@ Sample program of MATSU-bed
 
 https://os.mbed.com/teams/MATSU-bed/wiki/MATSU-bed-config
 
+tested on macOS Sierra (10.12.5)
+
 ## Usage
 
 * Build
@@ -17,6 +19,11 @@ make
 ```
 make install
 ```
+
+## Requirements
+
+* Python Package
+  * intelhex
 
 ## License
 
