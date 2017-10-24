@@ -254,6 +254,11 @@ $(PROJECT).bin: $(PROJECT).elf
 $(PROJECT).hex: $(PROJECT).elf
 	$(ELF2BIN) -O ihex $< $@
 
+install:
+	python $(PWD)/bin/lpc_checksum.py $(PROJECT).bin
+	if [ -d '/Volumes/CRP DISABLD' ]; then rm '/Volumes/CRP DISABLD/firmware.bin'; fi
+	if [ -d '/Volumes/CRP DISABLD' ]; then cp $(PROJECT).bin '/Volumes/CRP DISABLD/'; fi
+
 
 # Rules
 ###############################################################################
